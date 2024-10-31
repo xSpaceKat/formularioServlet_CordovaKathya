@@ -3,60 +3,57 @@
     Author     : Katt
 */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
-
 body {
     background-color: #568092;
     font-family: Arial, sans-serif;
+    font-size: 1rem;
 }
 
 .form {
     display: center;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    color: #66cab4;
+    max-width: 44rem;
+    margin:  auto;
 }
 
 .cuadro {
     display: flex;
     flex-direction: column;
+    width: 100%;
     max-width: 50rem;
     margin: 0 auto;
-    border: 1px solid #ddd;
+    border: solid black;
     padding: 20px;
     background-color: #FFFFFF;
     border-radius: 8px;
+
 }
 
-.head{
+.gris{
     display: flex;
     text-align: center;
     flex-direction: column;
+    width: 100%;
     max-width: 50rem;
     margin:  auto;
-    border: 1px solid #ddd;
+    border: solid black;
     padding: 20px;
     margin-top: 20px;
     background-color: #e7e9eb;
     border-radius: 8px;
-    color: #747676;
-    font-weight: bold;
 }
 
-.cuadro h1 {
+
+
+.cuadrito h1 {
     text-align: center;
     color: #333;
 }
-
 .form label {
-    margin-top: 10px;
     font-weight: bold;
-    color: #555;
+    color: #04aa6d;
+    margin-top: 10px;
 }
+
 
 .holder {
     display: flex;
@@ -71,7 +68,7 @@ body {
 
 .holder2 {
     display: flex;
-    width: 31.5rem;
+    width: 32.1rem;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
@@ -105,27 +102,43 @@ body {
 }
 
 .button {
-    text-align: center;
-    align-items: center;
-    width: 100px;
-    margin: 20px auto 0;
-    background-color: #66cab4;
+    display: flex;
+    align-items: flex-end;
+    margin: 20px auto ;
+    background-color: #04aa6d;
     color: white;
     padding: 10px 24px;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.5rem;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 1rem;
 }
+
 
 .form .row {
     display: flex;
     gap: 20px;
+    margin-bottom: 10px;
 }
 
 .form .column {
     flex: 1;
     display: flex;
     flex-direction: column;
+    width: 48%;
+}
+
+
+.inline-options {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.inline-options label {
+    font-weight: normal;
+    color: #333;
 }

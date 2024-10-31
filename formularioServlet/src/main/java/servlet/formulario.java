@@ -6,6 +6,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -65,17 +66,47 @@ public class formulario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String destino = "formulario-response.jsp";
-        
+
         String nombre = request.getParameter("name");
         String apellido = request.getParameter("lastName");
         String email = request.getParameter("email");
         String contraseña = request.getParameter("password");
+        String confirmarContraseña = request.getParameter("confirm_password");
         String genero = request.getParameter("gender");
         String hobbies = request.getParameter("hobbies");
         String sourceIncome = request.getParameter("source");
         String ingresos = request.getParameter("income");
         String edad = request.getParameter("age");
         String biografia = request.getParameter("bio");
+
+        // nombre
+        if (nombre.isEmpty() || nombre == null) {
+            System.out.println("Name required");
+        }
+
+        // email
+        if (email == null || email.isEmpty()) {
+            System.out.println("Email required");
+        } else {
+            String emailRegex = "^[A-Za-z0-9+_.-]+@(.+)$";
+            if (!Pattern.matches(emailRegex, email)) {
+                System.out.println("Invalid pattern");
+            }
+        }
+
+        // contraseñas
+        if (contraseña == null || contraseña.isEmpty() || confirmarContraseña == null || confirmarContraseña.isEmpty()) {
+            System.out.println("Password required");
+        } else {
+            if (!contraseña.equals(confirmarContraseña)) {
+                System.out.println("Passwords invalid");
+            }
+        }
+
+        // edad
+        if (Integer.parseInt(edad) < 18) {
+            System.out.println("Children not allowed");
+        }
 
         request.setAttribute("nombre", nombre);
         request.setAttribute("apellido", apellido);
