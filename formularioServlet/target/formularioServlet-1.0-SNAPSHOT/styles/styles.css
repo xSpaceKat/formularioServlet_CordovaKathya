@@ -1,0 +1,131 @@
+/* 
+    Created on : 31 oct 2024, 01:03:23
+    Author     : Katt
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #568092;
+    font-family: Arial, sans-serif;
+}
+
+.form {
+    display: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    color: #66cab4;
+}
+
+.cuadro {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.head{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    max-width: 50rem;
+    margin:  auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #e7e9eb;
+    border-radius: 8px;
+    color: #747676;
+    font-weight: bold;
+}
+
+.cuadro h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.holder {
+    display: flex;
+    width: 15rem;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: auto;
+}
+
+.holder2 {
+    display: flex;
+    width: 31.5rem;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: auto;
+}
+
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.group-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.radio-group, .checkbox-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.checkbox-group {
+    margin-right: 0;
+}
+
+.button {
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    margin: 20px auto 0;
+    background-color: #66cab4;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form .row {
+    display: flex;
+    gap: 20px;
+}
+
+.form .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
